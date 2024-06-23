@@ -14,7 +14,3 @@ services:
     restart: always
     build: ./scheduler
     privileged: true
-  cec:
-    restart: always
-    build: ./cec
-    privileged: true

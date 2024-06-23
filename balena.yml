@@ -40,22 +40,21 @@ assets:
         https://raw.githubusercontent.com/balena-labs-projects/balena-dash/master/assets/logo.png
 data:
   applicationConfigVariables:
-    - BALENA_HOST_CONFIG_gpu_mem: 128
+    - BALENA_HOST_CONFIG_gpu_mem: 396
     - BALENA_HOST_CONFIG_dtoverlay: "vc4-fkms-v3d"
+    - BALENA_HOST_CONFIG_disable_overscan: 1
   applicationEnvironmentVariables:
     - SHOW_CURSOR: 0
-    - CONTROL_TV: 0
-    - ENABLE_GPU: 0
+    - ENABLE_DISPLAY_TIMER: 0
+    - DISPLAY_ON: 0 7 * * *
+    - DISPLAY_OFF: 0 18 * * *
+    - ENABLE_GPU: 1
     - KIOSK: 1
     - PERSISTENT: 1
-    - PORTAL_SSID: balenaDash
-    - PORTAL_PASSPHRASE: balenaDash
     - ACTIVITY_TIMEOUT: 600
     - LAUNCH_URL: ''
     - ROTATE_DISPLAY: normal
     - WINDOW_POSITION: '0,0'
-    - LOCAL_HTTP_DELAY: 0
-    - FBCP_DISPLAY: ''
   defaultDeviceType: raspberrypi4-64
   supportedDeviceTypes:
     - raspberrypi4-64
