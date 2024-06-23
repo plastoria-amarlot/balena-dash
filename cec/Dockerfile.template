@@ -1,0 +1,21 @@
+FROM balenalib/%%BALENA_MACHINE_NAME%%-debian
+
+RUN install_packages cec-utils cron
+
+# Copy hello-cron file to the cron.d directory
+COPY cec-cron /etc/cron.d/cec-cron
+
+COPY cec.sh /usr/src/cec.sh
+RUN chmod +x /usr/src/cec.sh
+
+# Give execution rights on the cron job
+RUN chmod 0644 /etc/cron.d/cec-cron
+
+# Apply cron job
+RUN crontab /etc/cron.d/cec-cron
+
+# Create the log file to be able to run tail
+RUN touch /var/log/cron.log
+
+# Run the command on container startup
+CMD cron && tail -f /dev/null

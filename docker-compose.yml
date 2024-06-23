@@ -14,21 +14,7 @@ services:
     restart: always
     build: ./scheduler
     privileged: true
-  wifi-connect:
-    build: ./wifi-connect
+  cec:
     restart: always
-    network_mode: host
+    build: ./cec
     privileged: true
-    labels:
-      io.balena.features.dbus: '1'
-      io.balena.features.firmware: '1'
-  fbcp:
-    build: ./fbcp
-    restart: on-failure
-    privileged: true
-  browsercontrol:
-    build: ./browsercontrol
-    restart: always
-    privileged: true
-    ports:
-      - 8080:80
