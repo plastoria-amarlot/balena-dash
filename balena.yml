@@ -51,7 +51,6 @@ data:
     - ENABLE_GPU: 1
     - KIOSK: 1
     - PERSISTENT: 1
-    - ACTIVITY_TIMEOUT: 600
     - LAUNCH_URL: ''
     - ROTATE_DISPLAY: normal
     - WINDOW_POSITION: '0,0'

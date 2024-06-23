@@ -8,6 +8,7 @@ services:
     privileged: true
     ports:
       - 5011:5011
+      - 35173:35173
     volumes:
       - 'settings:/data'
   scheduler:
