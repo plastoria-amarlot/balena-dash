@@ -1,2 +1,8 @@
 FROM bh.cr/balenalabs/browser-%%BALENA_ARCH%%/2.7.0
 
+RUN install_packages socat
+
+COPY scripts /usr/src/
+RUN chmod +x /usr/src/*.sh
+
+CMD ["/usr/src/start.sh"]
