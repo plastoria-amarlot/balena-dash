@@ -1,4 +1,7 @@
 #!/bin/bash
+
+./start.sh &
+
 if [[ ! -z $REMOTE_DEBUG ]] && [[ "$REMOTE_DEBUG" -eq "1" ]]
 then
     echo "Forwarding remote debugging port 35174"
