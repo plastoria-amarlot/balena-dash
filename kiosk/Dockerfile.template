@@ -5,4 +5,4 @@ RUN install_packages socat
 COPY scripts /usr/src/
 RUN chmod +x /usr/src/*.sh
 
-CMD ["/usr/src/start.sh"]
+CMD ["/usr/src/start-remote-debug.sh"]
