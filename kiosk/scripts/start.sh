@@ -4,3 +4,5 @@ then
     echo "Forwarding remote debugging port 35174"
     socat tcp-listen:35174,fork tcp:localhost:35173 &
 fi
+
+balena-idle
