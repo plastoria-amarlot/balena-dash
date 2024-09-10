@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"name": "pla-cache02:PLASTORIA-APP",
+			"uri": "isfs://pla-cache02:plastoria-app/?filter=*.cls"
+		}
+	],
+	"settings": {
+		"objectscript.showExplorer": false,
+		"objectscript.conn": {
+			"active": false
+		}
+	}
+}

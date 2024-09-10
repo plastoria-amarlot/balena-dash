@@ -11,6 +11,8 @@ services:
       - 35174:35174
     volumes:
       - 'settings:/data'
+    labels:
+      io.balena.features.supervisor-api: '1'
   scheduler:
     restart: always
     build: ./scheduler
